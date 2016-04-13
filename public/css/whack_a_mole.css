@@ -1,13 +1,14 @@
 body {
     background-image: url(/img/park.jpg);
     text-align: center;
-    cursor: url(/img/hands.png), auto;
+    cursor: url(/img/hands.png), auto;    
+    overflow: hidden;
 }
 
-
-#container {
-    margin:none;
-    padding: none;
+.container {
+    width: 100%;
+/*    overflow: hidden;
+*/    position: relative;
 }
 
 /*div styling*/
@@ -15,7 +16,7 @@ body {
     font-family: 'Bangers', cursive;
     font-size: 50px;
     height: 33%;
-    width: 33%;
+    width: 33.3%;
     display: none;
     text-align: center;
 }
@@ -57,7 +58,7 @@ img{
 
 .molehole2 {
     position: absolute;
-    top: -340px;
+    top: -458px;
     display: none;
 }
 
@@ -74,26 +75,27 @@ img{
     display: none;
 }
 
-.molehole6 {
+.molehole5 {
     position: absolute;
     right: -458px;
     display: none;
+
 }
 
-.molehole7 {
+.molehole6 {
     position: absolute;
     left: -359px;
     bottom: -458px;
     display: none;
 }
 
-.molehole8 {
+.molehole7 {
     position: absolute;
-    bottom: -340px;
+    bottom: -458px;
     display: none;
 }
 
-.molehole5 {
+.molehole8 {
     position: absolute;
     right: -359px;
     bottom: -458px;
@@ -109,7 +111,6 @@ img{
 
 .active2 {
     display: block;
-    height: 340px;
     position: relative;
 }
 
@@ -119,6 +120,11 @@ img{
 }
 
 .active4 {
+    display: block;
+    position: relative;
+}
+
+.active5 {
     display: block;
     position: relative;
 }
@@ -134,12 +140,6 @@ img{
 }
 
 .active8 {
-    display: block;
-    height: 340px;
-    position: relative;
-}
-
-.active5 {
     display: block;
     position: relative;
 }
