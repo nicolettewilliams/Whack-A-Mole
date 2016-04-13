@@ -69,26 +69,23 @@ $(document).ready(function() {
                 randomSelected.removeClass('active');
             }, 1990);
 
-            // changes nut images depending on how many squirrels clicked
-            randomSelected.on('click', function(){
-
-                $(this).removeClass('active');
-                if (nuts >= 8){
-                    $('#gathered').html('Nuts Grabbed: ' + nuts + '<br><br>' + '<img src="/img/bignuts.png">');
-                } else if (nuts >= 4) {
-                    $('#gathered').html('Nuts Grabbed: ' + nuts + '<br><br>' + '<img src="/img/smallnuts.png">');
-                } else {
-                    $('#gathered').html('Nuts Grabbed: ' + nuts + '<br><br>' + '<img src="/img/nut.png">');
-                }
-                new Audio("/audio/clicked" + randomClicked + ".wav").play();
-            });
-
         }, 2000);
     };
     // ===========================================================================  
-    // increments score
     $('.img').on('click', function() {
+        // removes the active class when squirrel is clicked
+        $(this).removeClass('active');
+        new Audio("/audio/clicked" + randomClicked + ".wav").play();
+        // increments score
         nuts++
+        // changes nut images depending on how many squirrels clicked
+        if (nuts >= 8){
+            $('#gathered').html('Nuts Grabbed: ' + nuts + '<br><br>' + '<img src="/img/bignuts.png">');
+        } else if (nuts >= 4) {
+            $('#gathered').html('Nuts Grabbed: ' + nuts + '<br><br>' + '<img src="/img/smallnuts.png">');
+        } else {
+            $('#gathered').html('Nuts Grabbed: ' + nuts + '<br><br>' + '<img src="/img/nut.png">');
+        }
     }) ;
     // ===========================================================================
     // all animations for squirrels
