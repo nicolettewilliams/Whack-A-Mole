@@ -56,23 +56,23 @@ $(document).ready(function() {
             // random selected squirrels data
             var id = randomSelected.data('moleid');
 
-            randomSelected.addClass('active' + randomHole);
+            randomSelected.addClass('active');
 
             animateSquirrel(id, randomSelected);
 
             missed = setTimeout(function() {
                 
-                if(randomSelected.hasClass('active' + randomHole)){
+                if(randomSelected.hasClass('active')){
                     new Audio("/audio/missed" + randomMissed + ".wav").play();
                 };
 
-                randomSelected.removeClass('active' + randomHole);
+                randomSelected.removeClass('active');
             }, 1990);
 
             // changes nut images depending on how many squirrels clicked
             randomSelected.on('click', function(){
 
-                $(this).removeClass('active' + randomHole);
+                $(this).removeClass('active');
                 if (nuts >= 8){
                     $('#gathered').html('Nuts Grabbed: ' + nuts + '<br><br>' + '<img src="/img/bignuts.png">');
                 } else if (nuts >= 4) {

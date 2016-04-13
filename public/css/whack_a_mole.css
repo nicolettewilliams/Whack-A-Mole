@@ -103,42 +103,7 @@ img{
 
 /*List of all the mole hole transitions*/
 
-.active1 {
-    display: block;
-    position: relative;
-}
-
-.active2 {
-    display: block;
-    position: relative;
-}
-
-.active3 {
-    display: block;
-    position: relative;
-}
-
-.active4 {
-    display: block;
-    position: relative;
-}
-
-.active5 {
-    display: block;
-    position: relative;
-}
-
-.active6 {
-    display: block;
-    position: relative;
-}
-
-.active7 {
-    display: block;
-    position: relative;
-}
-
-.active8 {
+.active {
     display: block;
     position: relative;
 }
