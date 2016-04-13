@@ -4,6 +4,7 @@ $(document).ready(function() {
     var gameOverTimer = 31;
     var outdoor = new Audio("/audio/outdoor.mp3");
 
+    // plays background music on page load
     outdoor.play();
 
     // starts the game
@@ -12,9 +13,10 @@ $(document).ready(function() {
         $('.start').hide();
         play();
     });
-
+// ===========================================================================
     // makes the game work
     function play(){
+
         var endGame = setInterval(function() {
             if (gameOverTimer == 0) {
                 clearInterval(game);
@@ -34,8 +36,9 @@ $(document).ready(function() {
                 $('#yes').click(function(){
                     window.location.reload();
                 });
-            } 
-            // puts the counddown in the HTML
+            };
+
+            // puts the counddown in the body
             $('#countDown').html(' ' + gameOverTimer + ' seconds...');
             gameOverTimer--;
         }, 1000);
@@ -61,7 +64,7 @@ $(document).ready(function() {
                 
                 if(randomSelected.hasClass('active' + randomHole)){
                     new Audio("/audio/missed" + randomMissed + ".wav").play();
-                }
+                };
 
                 randomSelected.removeClass('active' + randomHole);
             }, 1990);
@@ -81,14 +84,13 @@ $(document).ready(function() {
             });
 
         }, 2000);
-    }  
-
+    };
+    // ===========================================================================  
     // increments score
     $('.img').on('click', function() {
-
         nuts++
     }) ;
-
+    // ===========================================================================
     // all animations for squirrels
     function animateSquirrel(id, squirrel) {
         
